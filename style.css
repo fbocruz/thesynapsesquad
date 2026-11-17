@@ -1,0 +1,108 @@
+:root {
+  --fundo: #140b2e;
+  --fundo-2: #1f1245;
+  --texto: #f3eefc;
+  --suave: #c9bde6;
+  --laranja: #ff9a1f;
+  --laranja-escuro: #e07800;
+  --borda: #3a2a6e;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at 50% 0%, #2b1a63 0%, var(--fundo) 60%) fixed;
+  background-color: var(--fundo);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 20px 24px;
+}
+
+h1, h2 { line-height: 1.25; }
+h1 { font-size: 2.1rem; margin: 0.4em 0 0.3em; }
+h2 { font-size: 1.25rem; color: var(--laranja); margin-top: 2em; }
+
+a { color: var(--laranja); }
+a:hover, a:focus { color: #ffc069; }
+
+.capa { text-align: center; }
+
+.foto {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 4px solid var(--laranja);
+  box-shadow: 0 0 40px rgba(255, 154, 31, 0.35);
+  display: block;
+  margin: 0 auto;
+}
+
+.lema { color: var(--suave); font-size: 1.1rem; margin: 0 0 1.5em; }
+
+.texto p { margin: 0 0 1em; }
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  padding: 0;
+  margin: 2em 0;
+  list-style: none;
+}
+
+.links a {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: var(--laranja);
+  color: #1a0d00;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.links a:hover, .links a:focus { background: #ffb24d; color: #1a0d00; }
+
+.contato {
+  text-align: center;
+  color: var(--suave);
+}
+
+.politica {
+  background: var(--fundo-2);
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+  padding: 24px 28px;
+}
+
+.politica ul { padding-left: 1.2em; }
+
+.data { color: var(--suave); }
+
+footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 16px 20px 40px;
+  border-top: 1px solid var(--borda);
+  color: var(--suave);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  body { font-size: 16px; }
+  main { padding: 28px 16px 16px; }
+  h1 { font-size: 1.7rem; }
+  .foto { width: 160px; height: 160px; }
+  .politica { padding: 18px 16px; }
+}
